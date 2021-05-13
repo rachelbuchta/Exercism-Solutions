@@ -30,11 +30,11 @@ describe('Phone Number', () => {
       expect(clean('12234567890')).toEqual('2234567890');
     });
 
-    xtest('valid when 11 digits and starting with 1 even with punctuation', () => {
+    test('valid when 11 digits and starting with 1 even with punctuation', () => {
       expect(clean('+1 (223) 456-7890')).toEqual('2234567890');
     });
 
-    xtest('invalid when more than 11 digits', () => {
+    test('invalid when more than 11 digits', () => {
       expect(() => clean('321234567890')).toThrow(
         new Error('More than 11 digits')
       );
