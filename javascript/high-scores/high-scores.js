@@ -3,9 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-//input: array of numbers
-//output: 
-
 export class HighScores {
   constructor(input) {
     this.input = input
@@ -26,6 +23,9 @@ export class HighScores {
   }
 
   get personalTopThree() {
-    throw new Error('Remove this statement and implement this function');
+    const topThree = this.input
+      .sort((a,b) => b - a)
+      .slice(0, 3)
+    return topThree
   }
 }
