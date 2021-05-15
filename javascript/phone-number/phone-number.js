@@ -1,10 +1,13 @@
 export const clean = (number) => {
   const characters = ['+', '-', '(', ')', ' ', '.']
+  const validNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
   const splitNumber = number.split('')
   const cleanDigits = splitNumber.filter(number => {
      if (!characters.includes(number)) {
       return number
-    }
+     } else if() {
+
+     }
   }).join('')
 
   if (cleanDigits.length === 9) {
